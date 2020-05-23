@@ -191,3 +191,24 @@ ul li a span:nth-child(4) {
     display: block;
 }
 
+.img_wow {
+    opacity:1;
+}
+
+.img_wow:hover {
+    opacity:.80;
+}
+
+.img_text {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff0600;
+    text-transform: uppercase;
+    transition: .5s;
+    text-align: center;
+    font-size: large;
+    font-weight: 900;
+}
+.img_text:hover {
+    font-size: xx-large;
+
+}

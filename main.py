@@ -1,5 +1,5 @@
 import os
-
+import random
 from flask import Flask, render_template
 import logging
 
@@ -16,6 +16,7 @@ db_session.global_init("db/battle.sqlite")
 def index():
     session = db_session.create_session()
     battles = session.query(Battle).all()
+    battles = random.sample(battles, len(battles))[:6]
     return render_template('main.html', title='Главная страница', battles=battles)
 
 
