@@ -50,3 +50,27 @@
     padding-bottom: 10px;
     text-align: center;
 }
+
+.a-text_battle {
+    color: tomato;
+    line-height: 40px;
+    text-transform: uppercase;
+    transition: .5s;
+    text-align: justify; text-justify: inter-word;
+}
+
+.img_text {
+    font-family: sans-serif;
+    color: #ff0600;
+    text-transform: uppercase;
+    transition: .5s;
+    text-align: center;
+    font-size: large;
+    background-size: 600px;
+}
+
+.img_text:hover {
+    font-size: xx-large;
+    background-size: 1000px;
+}
+
