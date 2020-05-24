@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="main_img_battle" style="background-image: url({{ battle.preview_img }});"></div>
+    <div class="autor_name-title">{{ battle.title }}</div>
+
+    <div class="title_battle">Коротко о главном<br>----</div>
+    <div class="text_battle">
+        {{ battle.text }}
+    </div>
+
+<div id="img_container">
+    <img class="bottom" src= />
+    <img class="top" src= />
+</div>
+
+{% endblock %}

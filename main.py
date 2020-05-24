@@ -20,5 +20,12 @@ def index():
     return render_template('main.html', title='Главная страница', battles=battles)
 
 
+@app.route('/battle/<int:battle_id>', methods=['GET'])
+def battle(battle_id):
+    session = db_session.create_session()
+    battle = session.query(Battle).filter(Battle.id == battle_id).first()
+    return render_template('battle.html', title=battle.title, battle=battle)
+
+
 if __name__ == '__main__':
     app.run()
