@@ -27,5 +27,12 @@ def battle(battle_id):
     return render_template('battle.html', title=battle.title, battle=battle)
 
 
+@app.route('/events', methods=['GET'])
+def events():
+    session = db_session.create_session()
+    events = session.query(Battle).all()
+    return render_template('events.html', title="События", events=events)
+
+
 if __name__ == '__main__':
     app.run()
