@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="main_img_battle" style="background-image: url({{ battle.preview_img }});"></div>
+    <div class="autor_name-title">{{ battle.title }}</div>
+
+    <div class="title_battle">Коротко о главном<br>----</div>
+    <div class="text_battle">
+        {{ battle.text }}
+    </div>
+    <div class="title_battle">Интересные статьи<br>----</div>
+    {% set articles = [battle.articles_img_1, battle.articles_img_2,
+        battle.articles_img_3, battle.articles_img_4, battle.articles_img_5] %}
+    {% set articles_a = [battle.articles_1, battle.articles_2,
+        battle.articles_3, battle.articles_4, battle.articles_5] %}
+    {% set articles_img = [battle.text_img_1, battle.text_img_2, battle.text_img_3,
+        battle.text_img_4, battle.text_img_5, battle.text_img_6, battle.text_img_7] %}
+    {% set videos = [battle.video_1, battle.video_2, battle.video_3] %}
+
+    <div class="d-flex align-items-center">
+        <div class="carousel-item active"  style="margin-left: 1%; margin-right: 2.3%">
+            {% for i in range(articles|length ) %}
+                {% if articles[i] %}
+                    <a href="{{ articles_a[i] }}"
+                       style="background-image:url({{ articles_img[i] }}); "
+                       class="img_wow col-12 col-md d-flex align-items-center justify-content-center">
+                        <span class="img_text">{{ articles[i] }}</span>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="title_battle">Документальные видео<br>----</div>
+
+    <div class="d-flex" style="margin-left: 10%">
+        <div class="carousel-item active">
+            {% for i in range(videos|length ) %}
+            {% if videos[i] %}
+            <iframe width="400" height="215"
+                    src="{{ videos[i] }}" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
