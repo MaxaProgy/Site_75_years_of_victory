@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" >
+        <link rel="stylesheet" href="/static/css/main/style.css">
+        <link rel="stylesheet" href="/static/css/battle/style.css">
+        <link rel="stylesheet" href="/static/css/events/style.css">
+        <link rel="stylesheet" href="/static/css/about/style.css">
+        <script src="/static/js/main/script.js"></script>
+        <script src="/static/js/battle/script.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </head>
+    <body style="background-color: #191313">
+        <header>
+            <nav style="background-color: #282020; height: 70px" class="navbar navbar-light style">
+                <ul>
+                    <li>
+                        <a style="color: aliceblue; width: 120px;" href="/">
+                            Твоя История
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/events">События
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/about">О нас
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="body_center">
+
+        {% block content %}{% endblock %}
+        </div>
+        <div style="margin-top: 90px;width: 100%; background-color: #282020">
+            <img width="100%"  src="http://bamper-himki.ru/wp-content/uploads/2017/05/9-may.png">
+            <div style="margin-left: 20%; margin-right: 20%" class="end_text_base">© 2020 by M@X@_progy. Данный сайт создан для конкурса <br>
+                "Мой выбор - моё будущее: Цифровое будущее России", 9 смена детского центра "Орлёнок".</div>
+        </div>
+    </body>
+</html>
