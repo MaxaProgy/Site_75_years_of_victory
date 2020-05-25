@@ -5,7 +5,7 @@ volumes:
 
 services:
   victory_server:
-    build: server/
+    build: .
     restart: always
     volumes:
       - victory_db:/usr/src/app/db

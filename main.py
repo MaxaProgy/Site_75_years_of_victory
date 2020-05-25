@@ -34,5 +34,10 @@ def events():
     return render_template('events.html', title="События", events=events)
 
 
+@app.route('/about', methods=['GET'])
+def about():
+    return render_template('about.html', title="О нас")
+
+
 if __name__ == '__main__':
     app.run()
