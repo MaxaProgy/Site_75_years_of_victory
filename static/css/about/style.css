@@ -4,3 +4,20 @@
     margin-right: 20px;
 }
 
+.my_photo {
+    margin-left: -10%;
+    width: 340px;
+    height: auto;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: tomato
+}
+
+
+@media screen and (max-width: 600px) {
+    .my_photo {
+        margin-left: -8%;
+        width: 200px;
+        height: auto;
+    }
+}
